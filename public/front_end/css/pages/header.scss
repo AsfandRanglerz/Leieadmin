@@ -1,0 +1,123 @@
+.header-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    z-index: 555;
+    .navbar-toggler {
+        padding: 0;
+        color: $themeDarkBtnLinkColor;
+        &:focus {
+            outline: none;
+        }
+    }
+    .navbar-brand {
+        .feelag-logo {
+            /*height: 35px;
+            width: 125px;*/
+            object-fit: contain;
+            width: 95px;
+        }
+        .felag-logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFF;
+        }
+    }
+    .navbar-links {
+        .nav-item {
+            margin: 0 16px;
+            .nav-link {
+                color: #FFF;
+                text-shadow: 0px 2px 6px $themeTextShadow;
+                font-size: 14px;
+                padding: 12px 0;
+            }
+            .dropdown-menu {
+                border: none;
+                background-color: $themeBtnLinkColor;
+                box-shadow: 0 2px 10px $themeDarkBoxShadow;
+                padding: 8px 16px;
+                width: max-content;
+                .dropdown-item {
+                    font-size: 14px;
+                    color: #FFF;
+                    -webkit-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                    border-radius: 4px;
+                    padding: 4px 10px;
+                    &:hover, &:focus {
+                        background-color: $themeDarkBtnLinkColor;
+                    }
+                }
+                .dropdown-menu-section:not(:last-child) {
+                    border-right: 1px solid #ffffff55;
+                }
+            }
+        }
+    }
+    .sign-in-btn {
+        color: #FFF;
+        border: 2px solid #FFF;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:hover, &:focus {
+            background-color: $themeDarkBtnLinkColor;
+            box-shadow: 0 2px 10px $themeDarkBoxShadow;
+            border: 2px solid $themeDarkBtnLinkColor!important;
+            color: #FFF!important;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .header-navbar {
+        .navbar-brand {
+            .feelag-logo {
+                object-fit: contain;
+                width: 80px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .header-navbar {
+        background-color: #FFF;
+        box-shadow: 0 2px 10px $themeDarkBoxShadow;
+        position: sticky;
+        .navbar-brand {
+            .feelag-logo {
+                filter: invert(0.8);
+            }
+        }
+        .main-nav-bar {
+            width: 100%;
+        }
+        .navbar-links {
+            .nav-item {
+                margin: 0;
+                .nav-link {
+                    color: #000;
+                    text-shadow: unset;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #00000025;
+                }
+                .dropdown-menu {
+                    width: unset;
+                    .dropdown-item {
+                        padding: 0.50em;
+                    }
+                }
+            }
+        }
+        .sign-in-btn {
+            color: $themeBtnLinkColor;
+            border: 2px solid $themeBtnLinkColor;
+        }
+    }
+}

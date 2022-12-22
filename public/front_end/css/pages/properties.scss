@@ -1,0 +1,28 @@
+.properties-container {
+    margin-bottom: 24px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .all-prop-block {
+        .all-prop-block-inner {
+            background: $themeBtnLinkColor;
+            border-radius: 4px 0 0 4px;
+            border-right: 2px solid #403d51;
+            .prop-name {
+                text-shadow: 0 2px 6px $themeTextShadow;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .properties-container {
+        margin-bottom: 16px;
+        .all-prop-block {
+            .all-prop-block-inner {
+                border-radius: 4px 4px 0 0;
+                border-right: 0;
+            }
+        }
+    }
+}

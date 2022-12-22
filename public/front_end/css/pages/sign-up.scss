@@ -1,0 +1,542 @@
+.sign-up {
+    .panel {
+        border-radius: 8px;
+
+        .wizard-content {
+            .wizard {
+                .landlord-choose-options {
+                    .landlord-group-btns {
+                        border: 1px solid lightgrey;
+                        padding: 30px 16px;
+                        width: 195px;
+
+                        .fa {
+                            font-size: 48px;
+                            color: #525f7f;
+                            margin-bottom: 16px;
+                        }
+
+                        .text {
+                            font-size: 16px;
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                    }
+
+                    .landlord-group-btns.active {
+                        background-color: $themeBtnLinkColor;
+
+                        .fa {
+                            color: #FFF;
+                        }
+
+                        .text {
+                            color: #FFF;
+                        }
+                    }
+
+                    .landlord-group-btns.focus {
+                        box-shadow: none;
+                    }
+                }
+
+                > .steps {
+                    > ul {
+                        > li {
+                            z-index: 1;
+                            &:after {
+                                content: '';
+                                z-index: 9;
+                                display: block;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            &:before {
+                                content: '';
+                                z-index: 9;
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                            }
+
+                            display: table-cell;
+                            width: auto;
+                            vertical-align: top;
+                            text-align: center;
+                            position: relative;
+
+                            a {
+                                position: relative;
+                                padding-top: 52px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                display: block;
+                                z-index: 555;
+                            }
+
+                            &:first-child {
+                                &:before {
+                                    content: none;
+                                }
+                            }
+
+                            &:last-child {
+                                &:after {
+                                    content: none;
+                                }
+                            }
+                        }
+
+                        display: table;
+                        width: 100%;
+                        table-layout: fixed;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        > li.current {
+                            > a {
+                                color: #2f3d4a;
+                                cursor: default;
+                            }
+
+                            .step {
+                                border-color: $themeBtnLinkColor;
+                                background-color: #fff;
+                                color: $themeBtnLinkColor;
+                            }
+                        }
+
+                        > li.disabled {
+                            a {
+                                color: #999;
+                                cursor: default;
+
+                                &:focus {
+                                    color: #999;
+                                    cursor: default;
+                                }
+
+                                &:hover {
+                                    color: #999;
+                                    cursor: default;
+                                }
+                            }
+                        }
+
+                        > li.done {
+                            a {
+                                color: #999;
+
+                                &:focus {
+                                    color: #999;
+                                }
+
+                                &:hover {
+                                    color: #999;
+                                }
+                            }
+
+                            .step {
+                                background-color: $themeBtnLinkColor;
+                                border-color: $themeBtnLinkColor;
+                                color: #fff;
+                            }
+                        }
+
+                        > li.error {
+                            .step {
+                                border-color: #f62d51;
+                                color: #f62d51;
+                            }
+                        }
+                    }
+
+                    position: relative;
+                    display: block;
+                    width: 100%;
+
+                    .current-info {
+                        position: absolute;
+                        left: -99999px;
+                    }
+
+                    .step {
+                        background-color: #fff;
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        margin-left: -24px;
+                        z-index: 10;
+                        text-align: center;
+                    }
+                }
+
+                width: 100%;
+                overflow: hidden;
+
+                .content {
+                    margin-left: 0 !important;
+                }
+
+                > .content {
+                    overflow: hidden;
+                    position: relative;
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+
+                    > .title {
+                        position: absolute;
+                        left: -99999px;
+                    }
+
+                    > .body {
+                        padding: 0 20px;
+                    }
+
+                    > iframe {
+                        border: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                > .actions {
+                    position: relative;
+                    display: block;
+                    text-align: right;
+                    padding: 0 20px 20px;
+
+                    > ul {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 24px 0 0;
+                        list-style: none;
+
+                        &:after {
+                            content: '';
+                            display: table;
+                            clear: both;
+                        }
+
+                        > li {
+
+                            > a {
+                                text-decoration: none;
+                                width: 95px;
+                                text-align: center;
+                                background: $themeBtnLinkColor;
+                                color: #FFF!important;
+                                display: block;
+                                padding: 7px 12px;
+                                border-radius: 4px;
+                                border: 1px solid transparent;
+
+                                &:focus {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
+                                }
+
+                                &:hover {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
+                                }
+
+                                &:active {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset;
+                                }
+                            }
+
+                            > a[href="#previous"] {
+                                background-color: #fff;
+                                color: #54667a!important;
+                                border: 1px solid #d9d9d9;
+
+                                &:focus {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset;
+                                }
+
+                                &:hover {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset;
+                                }
+
+                                &:active {
+                                    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .04) inset;
+                                    box-shadow: 0 0 0 100px rgba(0, 0, 0, .04) inset;
+                                }
+                            }
+                        }
+
+                        > li + li {
+                            margin-left: 10px;
+                        }
+
+                        > li.disabled {
+                            > a {
+                                color: #999;
+
+                                &:focus {
+                                    color: #999;
+                                }
+
+                                &:hover {
+                                    color: #999;
+                                }
+                            }
+
+                            > a[href="#previous"] {
+                                -webkit-box-shadow: none;
+                                box-shadow: none;
+
+                                &:focus {
+                                    -webkit-box-shadow: none;
+                                    box-shadow: none;
+                                }
+
+                                &:hover {
+                                    -webkit-box-shadow: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wizard.wizard-circle {
+                > .steps {
+                    > ul {
+                        > li {
+                            &:after {
+                                top: 45px;
+                                width: 50%;
+                                height: 3px;
+                                background-color: $themeBtnLinkColor;
+                            }
+
+                            &:before {
+                                top: 45px;
+                                width: 50%;
+                                height: 3px;
+                                background-color: $themeBtnLinkColor;
+                            }
+                        }
+
+                        > li.current {
+                            &:after {
+                                background-color: #F3F3F3;
+                            }
+                        }
+
+                        > li.current ~ li {
+                            &:after {
+                                background-color: #F3F3F3;
+                            }
+
+                            &:before {
+                                background-color: #F3F3F3;
+                            }
+                        }
+                    }
+
+                    .step {
+                        cursor: pointer;
+                        width: 50px;
+                        height: 50px;
+                        line-height: 45px;
+                        border: 3px solid #F3F3F3;
+                        font-size: 1.3rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .wizard.wizard-notification {
+                > .steps {
+                    > ul {
+                        > li {
+                            &:after {
+                                top: 39px;
+                                width: 50%;
+                                height: 2px;
+                                background-color: $themeBtnLinkColor;
+                            }
+
+                            &:before {
+                                top: 39px;
+                                width: 50%;
+                                height: 2px;
+                                background-color: $themeBtnLinkColor;
+                            }
+                        }
+
+                        > li.current {
+                            .step {
+                                border: 2px solid $themeBtnLinkColor;
+                                color: $themeBtnLinkColor;
+                                line-height: 36px;
+
+                                &:after {
+                                    border-top-color: $themeBtnLinkColor;
+                                }
+                            }
+
+                            &:after {
+                                background-color: #F3F3F3;
+                            }
+                        }
+
+                        > li.done {
+                            .step {
+                                &:after {
+                                    border-top-color: $themeBtnLinkColor;
+                                }
+
+                                color: #FFF;
+                            }
+                        }
+
+                        > li.current ~ li {
+                            &:after {
+                                background-color: #F3F3F3;
+                            }
+
+                            &:before {
+                                background-color: #F3F3F3;
+                            }
+                        }
+                    }
+
+                    .step {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 1.3rem;
+                        border-radius: 15%;
+                        background-color: #F3F3F3;
+
+                        &:after {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            margin-left: -8px;
+                            margin-bottom: -8px;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-top: 8px solid #F3F3F3;
+                        }
+                    }
+                }
+            }
+
+            .wizard.vertical {
+                > .steps {
+                    display: inline;
+                    float: left;
+                    width: 20%;
+
+                    > ul {
+                        > li {
+                            display: block;
+                            width: 100%;
+
+                            &:after {
+                                background-color: transparent;
+                            }
+
+                            &:before {
+                                background-color: transparent;
+                            }
+                        }
+
+                        > li.current {
+                            &:after {
+                                background-color: transparent;
+                            }
+
+                            &:before {
+                                background-color: transparent;
+                            }
+                        }
+
+                        > li.current ~ li {
+                            &:after {
+                                background-color: transparent;
+                            }
+
+                            &:before {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .sign-up {
+        .panel {
+            .wizard-content {
+                .wizard.wizard-circle {
+                    .landlord-choose-options {
+                        .landlord-group-btns {
+                            padding: 16px 24px;
+                            width: unset;
+
+                            .fa {
+                                font-size: 18px;
+                                margin-bottom: 0
+                            }
+
+                            .text {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    > .steps {
+                        .step {
+                            border: 3px solid #f3f3f3;
+                            border-radius: 50%;
+                            font-size: 14px;
+                            height: 40px;
+                            line-height: 35px;
+                            width: 40px;
+                            margin-left: -20px;
+                        }
+
+                        > ul {
+                            > li {
+                                a {
+                                    padding-top: 40px;
+                                }
+
+                                &:after {
+                                    top: 40px;
+                                }
+
+                                &:before {
+                                    top: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

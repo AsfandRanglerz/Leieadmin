@@ -1,0 +1,34 @@
+.all-leases-container {
+    .all-leases-container-inner {
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .all-leases-first-block {
+            background: $themeBtnLinkColor;
+            border-radius: 4px 0 0 4px;
+            border-right: 2px solid #403d51;
+
+            .lease-name {
+                text-shadow: 0 2px 6px $themeTextShadow;
+                &:first-child {
+                    background-color: #3588357a;
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .all-leases-container {
+        .all-leases-first-block {
+            border-radius: 4px 4px 0 0;
+            border-right: 0;
+        }
+
+        .leases-btns-block {
+            gap: 12px;
+        }
+    }
+}

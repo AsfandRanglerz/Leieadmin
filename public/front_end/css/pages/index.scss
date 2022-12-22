@@ -1,0 +1,222 @@
+.home {
+    .banner {
+        background-image: url(https://presisutleie.no/wp-content/uploads/2021/02/bg-01.jpg);
+        background-position: center center;
+        background-size: cover;
+        .banner-content {
+            background-color: #403d51e5;
+            padding: 10% 16%;
+            text-align: center;
+            color: #FFF;
+            .banner-heading {
+                text-shadow: 0px 3px 6px $themeTextShadow;
+            }
+            .banner-sub-heading {
+                text-shadow: 0px 3px 6px $themeTextShadow;
+                margin: 48px 0;
+            }
+            .banner-btn {
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                padding: 16px;
+            }
+        }
+    }
+    .img-holder {
+        margin-top: -10%;
+        text-align: center;
+        > img {
+            width: 55%;
+        }
+    }
+    .content-container-upper-one {
+        .content-container-inner {
+            .inner-block {
+                .content-container-inner-section {
+                    height: 225px;
+                    box-shadow: 0 2px 10px $themeBoxShadow;
+                    padding: 16px;
+                    border-radius: 8px;
+                    img {
+                        width: 55px;
+                        height: 55px;
+                        object-fit: contain;
+                        margin-top: 8px;
+                        margin-bottom: 24px;
+                    }
+                    p {
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        height: 4.5rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .content-container-upper-two {
+        background-color: $themeLightGreyBgColor;
+        padding: 56px 0;
+        .content-container-inner {
+            .content-container-inner-img {
+                > img {
+                    width: 85%;
+                }
+            }
+            .content-container-inner-section {
+                p {
+                    &:first-child {
+                        color: $themeBtnLinkColor;
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 600;
+                    }
+                }
+                h4 {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    .banner-icon {
+        background-color: #007aca;
+        background-image: url(../images/bg-icon.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        .banner-icon-inner {
+            background-color: #000000d5;
+            padding: 76px 16px;
+            > h2 {
+                color: #FFF;
+                text-shadow: 0px 2px 6px $themeTextShadow;
+            }
+            >p {
+                color: #FFF;
+                text-shadow: 0px 2px 6px $themeTextShadow;
+            }
+            .banner-icon-inner-section {
+                box-shadow: 0 2px 10px $themeBoxShadow;
+                padding: 36px 24px;
+                border-radius: 8px;
+                background-color: #FFF;
+                .green-ribbon {
+                    position: absolute;
+                    right: -36px;
+                    transform: rotate(40deg);
+                    top: 24px;
+                    font-size: 10px;
+                    background: #28a745;
+                    color: #FFFF;
+                    display: block;
+                    width: 145px;
+                    text-align: center;
+                    padding: 4px 0;
+                }
+                .sub-heading {
+                    color: $themeBtnLinkColor;
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+                ul {
+                    display: flex;
+                    display: -ms-flex;
+                    display: -webkit-flex;
+                    flex-direction: column;
+                    -ms-flex-direction: column;
+                    -webkit-flex-direction: column;
+                    row-gap: 8px;
+                    li {
+                        display: flex;
+                        align-items: baseline;
+
+                        .fa-check-circle {
+                            color: $themeBtnLinkColor;
+                        }
+                    }
+                }
+            }
+            .banner-icon-btn {
+                background-color: #FFF;
+                color: $themeBtnLinkColor;
+                padding: 16px 24px;
+                margin-top: 24px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                box-shadow: 0 2px 10px $themeDarkBoxShadow;
+                &:hover, &:focus {
+                    color: #FFF;
+                    background-color: $themeDarkBtnLinkColor;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .home {
+        .content-container-upper-two {
+            .content-container-inner {
+                .content-container-inner-img {
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .home {
+        .banner {
+            .banner-content {
+                .banner-heading {
+                    font-size: 40px;
+                }
+                .banner-sub-heading {
+                    font-size: 24px;
+                }
+                .banner-btn {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .home {
+        .banner {
+            .banner-content {
+                .banner-sub-heading {
+                    margin: 24px 0;
+                }
+                .banner-btn {
+                    padding: 10px 8px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .home {
+        .banner {
+            .banner-content {
+                padding: 6% 16% 14%;
+                .banner-sub-heading {
+                    margin: 24px 0;
+                }
+            }
+        }
+        .content-container-upper-two {
+            padding: 24px 0;
+        }
+        .banner-icon {
+            .banner-icon-inner {
+                padding: 24px 16px;
+            }
+        }
+    }
+}

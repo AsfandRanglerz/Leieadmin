@@ -1,0 +1,111 @@
+#dashboardSidebar {
+    transition: margin .25s ease-out;
+    background-color: #403d51;
+    position: fixed;
+    left: 0;
+    width: 255px;
+    height: 100%;
+    z-index: 555;
+
+    .sidebar-logo {
+        width: 125px;
+        object-fit: contain;
+    }
+
+    .side-nav {
+        .side-nav-links {
+            list-style: none;
+
+            > li {
+                cursor: pointer;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                .sidebar-links {
+                    padding: 8px 16px;
+                    margin: 2px 0;
+                    color: #FFF;
+                    text-decoration: none;
+                    -ms-transform: scale(1);
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    display: block;
+
+                    .sidebar-link-icons {
+                        font-size: 14px;
+                        width: 25px;
+                        text-align: center;
+                    }
+                }
+
+                &:hover {
+                    background-color: #3588357a;
+                }
+            }
+
+            > li.active {
+                background-color: #3588357a;
+                li.active {
+                    background-color: $themeDarkBtnLinkColor;
+                }
+            }
+
+            .dropdown {
+                .side-nav-dropdown {
+                    padding: 0 16px 16px;
+                    list-style: none;
+                    display: none;
+
+                    > li {
+                        border-bottom: 1px solid #ffffff45;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: $themeDarkBtnLinkColor;
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        .sidebar-links {
+                            padding: 8px 16px;
+                            text-decoration: none;
+                            -ms-transform: scale(1);
+                            -webkit-transform: scale(1);
+                            transform: scale(1);
+                            display: block;
+                        }
+                    }
+                }
+
+                &:after {
+                    content: "\f105";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 700;
+                    font-size: 16px;
+                    position: absolute;
+                    right: 16px;
+                    top: 6px;
+                    color: #FFF;
+                    -webkit-transition: all .3s ease-in-out;
+                    -moz-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            .opend {
+                background-color: #3588357a;
+
+                &:after {
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

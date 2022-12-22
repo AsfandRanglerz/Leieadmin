@@ -1,0 +1,10 @@
+.google-map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .google-map {
+        height: 235px;
+    }
+}

@@ -1,0 +1,278 @@
+.rent-guarantee {
+    .banner {
+        background-image: url(./../images/precise-rent-banner-img.jpg);
+        background-position: center center;
+        background-size: cover;
+        .banner-content {
+            background-color: #1e7e348f;
+            padding: 8% 8% 4%;
+            color: #FFF;
+            .banner-content-block {
+                background-color: #403D51D9;
+                box-shadow: 0 2px 10px $themeBoxShadow;
+                .banner-heading {
+                    text-shadow: 0px 3px 6px $themeTextShadow;
+                }
+            }
+        }
+    }
+    .banner-icon {
+        .light-grey-bg {
+            background-color: #f6f9fcf5!important;
+            .heading, .p-text {
+                color: #000!important;
+                text-shadow: none!important;
+            }
+        }
+        background-color: #007aca;
+        background-image: url(../images/bg-icon.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        .banner-icon-inner {
+            background-color: #000000d5;
+            padding: 76px 16px;
+            > h2 {
+                color: #FFF;
+                text-shadow: 0px 2px 6px $themeTextShadow;
+            }
+            > p {
+                color: #FFF;
+                text-shadow: 0px 2px 6px $themeTextShadow;
+            }
+            .banner-content-half {
+                .img-holder {
+                    width: 405px;
+                    height: 325px;
+                    margin: 0 auto;
+                }
+                > h2 {
+                    color: #FFF;
+                    text-shadow: 0px 2px 6px $themeTextShadow;
+                }
+                > p {
+                    color: #FFF;
+                    text-shadow: 0px 2px 6px $themeTextShadow;
+                }
+            }
+            .banner-icon-inner-section {
+                box-shadow: 0 2px 10px $themeBoxShadow;
+                padding: 36px 24px;
+                border-radius: 8px;
+                background-color: #FFF;
+                .green-ribbon {
+                    position: absolute;
+                    right: -36px;
+                    transform: rotate(40deg);
+                    top: 24px;
+                    font-size: 10px;
+                    background: #28a745;
+                    color: #FFFF;
+                    display: block;
+                    width: 145px;
+                    text-align: center;
+                    padding: 4px 0;
+                }
+                .sub-heading {
+                    color: $themeBtnLinkColor;
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+                ul {
+                    display: flex;
+                    display: -ms-flex;
+                    display: -webkit-flex;
+                    flex-direction: column;
+                    -ms-flex-direction: column;
+                    -webkit-flex-direction: column;
+                    row-gap: 8px;
+                    li {
+                        display: flex;
+                        align-items: baseline;
+
+                        .fa-check-circle {
+                            color: $themeBtnLinkColor;
+                        }
+                    }
+                }
+            }
+            .banner-icon-btn {
+                background-color: #FFF;
+                color: $themeBtnLinkColor;
+                padding: 16px 24px;
+                margin-top: 24px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                box-shadow: 0 2px 10px $themeDarkBoxShadow;
+                &:hover, &:focus {
+                    color: #FFF;
+                    background-color: $themeDarkBtnLinkColor;
+                }
+            }
+        }
+    }
+    .content-container-upper-two {
+        background-color: $themeLightGreyBgColor;
+        padding: 80px 0 48px 0;
+        .block-content {
+            padding: 24px 16px;
+            border-radius: 8px;
+            background-color: #FFF;
+            .img-holder {
+                width: 65px;
+                height: 65px;
+            }
+            .heading {
+                display: flex;
+                column-gap: 8px;
+            }
+            .number {
+                color: $themeBtnLinkColor;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                width: 35px;
+                height: 35px;
+                border: 2px solid;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .content-container-upper-three {
+        padding: 80px 0 48px 0;
+        .block-content {
+            background-color: $themeLightGreyBgColor;
+            position: relative;
+            padding: 36px;
+            border-radius: 8px;
+        }
+        .block-content-left {
+            &:after {
+                content: " ";
+                position: absolute;
+                left: -20px;
+                top: 15px;
+                border-top: 20px solid transparent;
+                border-right: 20px solid $themeLightGreyBgColor;
+                border-left: none;
+                border-bottom: 20px solid transparent;
+            }
+        }
+        .block-content-right {
+            &:after {
+                content: " ";
+                position: absolute;
+                right: -20px;
+                top: 15px;
+                border-top: 20px solid transparent;
+                border-right: none;
+                border-left: 20px solid $themeLightGreyBgColor;
+                border-bottom: 20px solid transparent;
+            }
+        }
+        .seperator {
+            height: 100%;
+            display: inline-block;
+            background-color: #E4E7EA;
+            color: #E4E7EA;
+        }
+        .number {
+            color: #FFF;
+            background: #48a955;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+            border: 2px solid;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .rent-guarantee {
+        .banner {
+            .banner-content {
+                padding: 8% 3% 4%;
+            }
+        }
+        .banner-icon {
+            .banner-icon-inner {
+                .banner-content-half {
+                    .img-holder {
+                        width: 100%;
+                        height: 255px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .rent-guarantee {
+        .banner {
+            .banner-content {
+                .banner-content-block {
+                    .banner-btn {
+                        font-size: 18px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .rent-guarantee {
+        .content-container-upper-two {
+            padding: 30px 0 30px 0;
+        }
+        .content-container-upper-three {
+            padding: 30px 0 30px 0;
+            .block-content-left {
+                &:after {
+                    content: none;
+                }
+            }
+            .block-content-right {
+                &:after {
+                    content: none;
+                }
+            }
+            .number-outer {
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                z-index: 1;
+                .number {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 16px;
+                }
+            }
+            .seperator {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .rent-guarantee {
+        .banner-icon {
+            .banner-icon-inner {
+                padding: 24px 16px;
+            }
+        }
+    }
+}

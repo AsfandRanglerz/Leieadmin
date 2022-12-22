@@ -1,0 +1,11 @@
+<script src="{{asset('public/front_end/js/jquery-3.5.1.min.js')}}"></script>
+<script src="{{asset('public/front_end/js/popper.min.js')}}"></script>
+<script src="{{asset('public/front_end/js/bootstrap-4.5.0.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/jquery.steps-1.1.0/jquery.steps.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/al-range-slider/js/al-range-slider.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/toastr/js/toastr.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/WOW-master/js/wow.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/select2/js/select2.min.js')}}"></script>
+<script src="{{asset('public/front_end/plugins/slick-1.8.1/slick.min.js')}}"></script>
+<script src="{{asset('dist/main.js')}}"></script>

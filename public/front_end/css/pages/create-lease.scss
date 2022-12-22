@@ -1,0 +1,168 @@
+.create-lease-pg {
+    .depo-gurantee-sec {
+        .deposit-sec-outer {
+            margin-bottom: 24px;
+            .deposit-section-block {
+                background: $themeBtnLinkColor;
+                height: 100%;
+                text-align: center;
+                border-radius: 8px;
+                padding: 24px;
+                .fa-deposit-icons {
+                    color: #FFF;
+                    font-size: 30px;
+                }
+            }
+        }
+        .deposit-rental-user-sec {
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 665px;
+            margin: 24px auto;
+        }
+    }
+    .ready-for-sign-sec {
+        .ready-for-sign-sec-inner {
+            border-radius: 8px;
+            .pdf-img {
+                height: 30px;
+                margin-right: 24px;
+            }
+        }
+    }
+    .steps-info-main {
+        max-width: 505px;
+        margin: auto;
+        .steps-info {
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            margin-bottom: 36px;
+            .fa-icons {
+                align-items: center;
+                background: #28a745;
+                border-radius: 50px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 14px;
+            }
+        }
+    }
+    .check-tenant-pay-remarks-container {
+        border-radius: 8px;
+        padding: 24px 48px;
+    }
+    .al-range-slider {
+        padding-top: 0;
+        padding-bottom: 0;
+        .al-range-slider__track {
+            height: 1.3em;
+            .al-range-slider__bar {
+                background: linear-gradient(
+                        90deg, #403d51, $themeDarkBtnLinkColor);
+                border-radius: 1em;
+                box-shadow: 0 0 6px $themeDarkBoxShadow;
+            }
+            .al-range-slider__knob {
+                box-shadow: 0 0 6px $themeDarkBoxShadow;
+                &:hover {
+                    border-color: $themeBtnLinkColor;
+                }
+            }
+            .al-range-slider__knob_active {
+                border-color: $themeBtnLinkColor;
+            }
+        }
+        .al-range-slider__input {
+            display: none;
+        }
+    }
+    .pdf-images {
+        box-shadow: 0 2px 10px $themeBoxShadow;
+        padding: 30px 30px;
+        max-width: 575px;
+        margin: auto;
+        .pdf-img {
+            margin: auto;
+            width: 100%;
+            max-height: 675px;
+            object-fit: contain;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .create-lease-pg {
+        .steps-info-main {
+            max-width: 505px;
+            margin: auto;
+
+            .steps-info {
+                display: flex;
+                align-items: center;
+                column-gap: 16px;
+                margin-bottom: 36px;
+
+                .fa-icons {
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+    .create-lease-pg {
+        .depo-gurantee-sec {
+            .depo-gurantee-btn {
+                width: 235px;
+            }
+        }
+        .ready-for-sign-sec {
+            .ready-for-sign-sec-inner {
+                .thankyou-btn {
+                    width: 315px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .create-lease-pg {
+        .steps-info-main {
+            .steps-info {
+                margin-bottom: 24px;
+            }
+        }
+        .depo-gurantee-sec {
+            .deposit-rental-user-sec {
+                flex-direction: column;
+                text-align: center;
+                padding: 16px;
+                row-gap: 12px;
+            }
+        }
+        .check-tenant-pay-remarks-container {
+            padding: 16px;
+        }
+        .al-range-slider {
+            .al-range-slider__knob {
+                height: 1.5em;
+                width: 1.5em;
+                border-width: .3em;
+            }
+            .al-range-slider__grid-mark {
+                font-size: 12px;
+            }
+            .al-range-slider__tooltip {
+                font-size: 12px;
+            }
+        }
+    }
+}

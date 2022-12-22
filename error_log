@@ -1,0 +1,1 @@
+[16-Nov-2021 13:45:49 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Client\LeaseController::open_lease() in /home/ranghtrk/felagnew.ranglerz.pw/app/Http/Controllers/Client/LeaseController.php on line 356

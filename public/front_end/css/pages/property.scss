@@ -1,0 +1,32 @@
+.property-pg {
+    .info-container {
+        border: 2px solid $themeBtnLinkColor;
+        padding: 16px;
+        border-radius: 6px;
+        .info-icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            display: -ms-flex;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $themeBtnLinkColor;
+            color: #FFF;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px $themeBoxShadow;
+        }
+    }
+    .more-info-btn {
+        border-bottom: 2px dashed;
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+    }
+}
+@media (max-width: 575px) {
+    .create-property-pg {
+        .info-container {
+            padding: 12px 0;
+        }
+    }
+}
