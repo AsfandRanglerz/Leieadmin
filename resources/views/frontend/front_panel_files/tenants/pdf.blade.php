@@ -44,18 +44,18 @@
         </div>
 
         <div class="form-row">
-            <div class="row">
-                <div class="form-group col-lg-6">
-                    <label>First Name</label>
-                    <input type="text" id="firstNameReadOnly" value="{{ $data->user->name }}" class="form-control"
-                        readonly />
-                </div>
-                <div class="form-group col-lg-6">
-                    <label>Last Name</label>
-                    <input id="lastNameReadOnly" value="{{ $data->user->name }}" type="text" class="form-control"
-                        readonly />
-                </div>
+            {{-- <div class="row"> --}}
+            <div class="form-group col-lg-6">
+                <label>First Name</label>
+                <input type="text" id="firstNameReadOnly" value="{{ $data->user->name }}" class="form-control"
+                    readonly />
             </div>
+            <div class="form-group col-lg-6">
+                <label>Last Name</label>
+                <input id="lastNameReadOnly" value="{{ $data->user->name }}" type="text" class="form-control"
+                    readonly />
+            </div>
+            {{-- </div> --}}
             <div class="form-group col-lg-6">
                 <label>Email</label>
                 <input id="emailReadOnly" type="text" value="{{ $data->user->email }}" class="form-control"
@@ -159,6 +159,11 @@
         <h6>Rental object</h6>
         <div class="form-row">
             <div class="form-group col-lg-6">
+                <label>Type of rental object</label>
+                <input type="text" value="{{ $data->rentalObject->rental_object }}" class="form-control"
+                    readonly />
+            </div>
+            <div class="form-group col-lg-6">
                 <label>Street Name</label>
                 <input type="text" value="{{ $data->rentalObject->property->street_name }}" class="form-control"
                     readonly />
@@ -171,11 +176,6 @@
             <div class="form-group col-lg-6">
                 <label>Property Number</label>
                 <input type="text" value="{{ $data->rentalObject->property->farm_number }}" class="form-control"
-                    readonly />
-            </div>
-            <div class="form-group col-lg-6">
-                <label>Type of rental object</label>
-                <input type="text" value="{{ $data->rentalObject->rental_object }}" class="form-control"
                     readonly />
             </div>
         </div>
@@ -195,6 +195,10 @@
                 <input type="text" value="{{ $data->binding_peroid }}" class="form-control" readonly />
             </div>
             <div class="form-group col-lg-6">
+                <label>Rent amount</label>
+                <input type="text" value="{{ $data->rent_per_month }}" class="form-control" readonly />
+            </div>
+            <div class="form-group col-lg-6">
                 <label>Start date</label>
                 <input type="text" value="{{ $data->start_date_of_agreement }}" class="form-control" readonly />
             </div>
@@ -202,10 +206,6 @@
             <div class="form-group col-lg-6">
                 <label>End date</label>
                 <input type="text" value="{{ $data->end_date_of_agreement }}" class="form-control" readonly />
-            </div>
-            <div class="form-group col-lg-6">
-                <label>Rent amount</label>
-                <input type="text" value="{{ $data->rent_per_month }}" class="form-control" readonly />
             </div>
             <div class="form-group col-lg-6">
                 <label>Deposit amount</label>
