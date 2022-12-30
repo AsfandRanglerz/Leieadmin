@@ -29,6 +29,9 @@
 
 <body>
     <section class="m-4">
+        <div class="">
+            <img src="{{ asset('public/uploads/'.$logo->logo) }}" height="40px" style="background: black">
+        </div>
         <div class="d-flex flex-column">
             <div>
                 <button class="float-right border-0" onclick="window.print()"><img
@@ -78,16 +81,15 @@
             </div>
         </div>
 
-        <h5>LandLord Signature: </h5>
+        <h5>LandLord Signature </h5>
         @if (isset($data->landlord_signature))
             <img src="{{ asset('public/signature/' . $data->landlord_signature) }}" height="100px">
         @else
-            @if ($title == 'landlord')
+            @if (auth()->user()->user_type != 'tenant')
                 <div class="card-body">
                     <form method="POST" action="{{ route('signature.save', ['id' => $data->id]) }}">
                         @csrf
                         <div class="col-md-12">
-                            <h5>LandLord Signature: </h5>
                             <br />
                             <div id="sig"></div>
                             <br />
@@ -128,23 +130,15 @@
                 <input type="text" value="{{ $data->property->street_number }}" class="form-control" readonly />
             </div>
         </div>
-        @if ($title == 'view')
-            <h5>Tenant Signature: </h5>
-            @if (isset($data->tenant_signature))
-                <img src="{{ asset('public/signature/' . $data->tenant_signature) }}" height="100px">
-            @endif
+        <h5>Tenant Signature </h5>
+        @if (isset($data->tenant_signature))
+            <img src="{{ asset('public/signature/' . $data->tenant_signature) }}" height="100px">
         @else
-            @if (isset($data->tenant_signature))
-                <div class="d-flex">
-                    <h5>Tenant Signature: </h5>
-                    <img src="{{ asset('public/signature/' . $data->tenant_signature) }}" height="100px">
-                </div>
-            @else
+            @if (isset($type) && $type == 'sign')
                 <div class="card-body">
                     <form method="POST" action="{{ route('signature.save', ['id' => $data->id]) }}">
                         @csrf
                         <div class="col-md-12">
-                            <h5>Tenant Signature: </h5>
                             <br />
                             <div id="sig"></div>
                             <br />

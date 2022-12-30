@@ -387,6 +387,13 @@
             <div class="col-lg-6">
                 <div class="p-3 rounded light-box-shadow">
                     <h6 class="pb-3 mb-4 clearfix top-head-block">Rental object info <span class="fa fa-home text-success float-right icon-head-block"></span></h6>
+                    <div class="col-md-6">
+                        <a target="__blank" href="{{ route('view.pdf', ['id' => $data->id]) }}">
+                            <img src="{{ asset('public/front_end/images/file-icons/pdf.svg') }}"
+                                class="pdf-img" width="30px" />
+                            <span>-Rental Lease</span>
+                        </a>
+                    </div>
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <h6 class="mb-0">Property:</h6>

@@ -23,14 +23,12 @@ class LeaseController extends Controller
 {
     public function index()
     {
-
         $property_data = Property::where('status', 'unblock')->where('user_id', Auth()->id())->get();
         $account_data = Account::where('user_id', auth()->id())->get();
         return view('frontend.front_panel_files.leases.create_lease', compact('property_data', 'account_data'));
     }
     public function open_lease($id)
     {
-
         $data = Lease::find($id);
         $datetime1 = new DateTime($data->start_date_of_agreement);
         $datetime2 = new DateTime($data->end_date_of_agreement);
@@ -47,6 +45,7 @@ class LeaseController extends Controller
         Session::put('property', $data->id);
         return response()->json($data);
     }
+
     public function get_rental_object(Request $request)
     {
         $data = RentalObject::find($request->id);
@@ -392,7 +391,7 @@ class LeaseController extends Controller
         $interval = $datetime1->diff($datetime2);
         $interval = $interval->y . '.' . $interval->m;
         $data['termination_peroid'] = $interval;
-        return view('frontend.front_panel_files.tenants.create_lease',$data);
+        return view('frontend.front_panel_files.tenants.create_lease', $data);
     }
     public function tenant_leases_complete($id)
     {

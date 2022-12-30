@@ -169,7 +169,7 @@ Route::group(['prefix' => 'client'], function () {
 
 });
 /** pdf report and digital signaterd routes */
-Route::get('view/pdf/{id}', [PDFController::class, 'index'])->name('view.pdf');
+Route::get('view/pdf/{id}', [PDFController::class, 'viewPdf'])->name('view.pdf');
 Route::get('open/pdf/{id}', [PDFController::class, 'openPdf'])->name('open.pdf');
 Route::post('signature/save/{id}', [PDFController::class, 'signatured'])->name('signature.save');
 
