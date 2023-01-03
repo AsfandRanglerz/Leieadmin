@@ -155,13 +155,14 @@ class LeaseController extends Controller
             $tenantData->think_about_collecting_rent = $Step4['think_about_collecting_rent'];
             $tenantData->save();
 
-            $lease = Lease::find($Step1['lease_id']);
-            $property = Property::with('rental_object')->find($lease->property_id);
+            $lease = Lease::with('user','property','rentalObject')->find($Step1['lease_id']);
+            // $property = Property::with('rental_object')->find($lease->property_id);
 
             return response()->json([
                 'success' => "successfully",
                 'lease' => $lease,
-                'property' => $property,
+                'property' =>  $lease->property,
+                'rentalObject' => $lease->rentalObject,
             ]);
         }
 

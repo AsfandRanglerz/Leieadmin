@@ -322,32 +322,39 @@
                                 @php
                                     $data = App\Models\LeieadminLogo::first();
                                 @endphp
-                                <div>
-                                    <h5>Tenant</h5>
-                                </div>
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between"
+                                    style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5>Tenant</h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}"
+                                            class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-lg-6">
                                         <label>First name of tenant</label>
-                                        <input id="firstNameTenantpreview" type="text" value="{{$lease->tenant->first_name}}"class="form-control"
+                                        <input id="firstNameTenantpreview" type="text"
+                                            value="{{ $lease->tenant->first_name }}"class="form-control"
                                             placeholder="First name of tenant" readonly />
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Surname of tenant</label>
-                                        <input id="surnameTenantpreview" type="text" value="{{$lease->tenant->surname}}" class="form-control"
+                                        <input id="surnameTenantpreview" type="text"
+                                            value="{{ $lease->tenant->surname }}" class="form-control"
                                             placeholder="Surname of tenant" readonly />
                                     </div>
                                     <div class="form-group col-lg-12">
                                         <label>Email to tenant</label>
-                                        <input id="emailTenantpreview" type="text " value="{{$lease->tenant->email}}" class="form-control"
+                                        <input id="emailTenantpreview" type="text "
+                                            value="{{ $lease->tenant->email }}" class="form-control"
                                             placeholder="example@gmail.com" readonly />
                                     </div>
                                     <div class="form-group col-lg-12">
                                         <label>Mobile number for tenant</label>
-                                        <input id="phoneTenantpreview" type="text" value="{{$lease->tenant->phone}}" placeholder="Mobile Number"
+                                        <input id="phoneTenantpreview" type="text"
+                                            value="{{ $lease->tenant->phone }}" placeholder="Mobile Number"
                                             class="form-control" readonly>
                                     </div>
 
@@ -359,31 +366,28 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div>
-                                    <h5>LandLord</h5>
-                                </div>
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div><h5>LandLord</h5></div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-lg-12">
                                         <label>Name of LandLord</label>
-                                        <input id="firstNameTenantpreview" type="text" value="{{$lease->user->name}}"class="form-control"
+                                        <input id="firstNameTenantpreview" type="text"
+                                            value="{{ $lease->user->name }}"class="form-control"
                                             placeholder="First name of tenant" readonly />
                                     </div>
                                     <div class="form-group col-lg-12">
                                         <label>Email to LandLord</label>
-                                        <input id="emailTenantpreview" type="text " value="{{$lease->user->email}}" class="form-control"
-                                            placeholder="example@gmail.com" readonly />
+                                        <input id="emailTenantpreview" type="text " value="{{ $lease->user->email }}"
+                                            class="form-control" placeholder="example@gmail.com" readonly />
                                     </div>
                                     <div class="form-group col-lg-12">
                                         <label>Mobile number for LandLord</label>
-                                        <input id="phoneTenantpreview" type="text" value="{{$lease->user->phone}}" placeholder="Mobile Number"
-                                            class="form-control" readonly>
+                                        <input id="phoneTenantpreview" type="text" value="{{ $lease->user->phone }}"
+                                            placeholder="Mobile Number" class="form-control" readonly>
                                     </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
@@ -393,15 +397,11 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div><h5>Rental object</h5></div>
                                     <div>
-                                        <h5>Rental object</h5>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
                                     </div>
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-lg-12">
@@ -432,15 +432,11 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div>
-                                    <h5>Rental period and rent</h5>
-                                </div>
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div><h5>Rental period and rent</h5></div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-lg-6">
@@ -450,8 +446,8 @@
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Termination period</label>
-                                        <input type="text" value="{{ $lease->termination_peroid }}Years" class="form-control"
-                                            readonly />
+                                        <input type="text" value="{{ $lease->termination_peroid }}Years"
+                                            class="form-control" readonly />
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Binding time</label>
@@ -465,23 +461,24 @@
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Start date</label>
-                                        <input type="text" value="{{ $lease->start_date_of_agreement }}" class="form-control"
-                                            readonly />
+                                        <input type="text" value="{{ $lease->start_date_of_agreement }}"
+                                            class="form-control" readonly />
                                     </div>
-        
+
                                     <div class="form-group col-lg-6">
                                         <label>End date</label>
-                                        <input type="text" value="{{ $lease->end_date_of_agreement }}" class="form-control"
-                                            readonly />
+                                        <input type="text" value="{{ $lease->end_date_of_agreement }}"
+                                            class="form-control" readonly />
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Deposit amount</label>
-                                        <input type="text" value="{{ $lease->payment_for_first_rent }}" class="form-control"
-                                            readonly />
+                                        <input type="text" value="{{ $lease->payment_for_first_rent }}"
+                                            class="form-control" readonly />
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Due date for rent</label>
-                                        <input type="text" value="{{ $lease->due_date }}" class="form-control" readonly />
+                                        <input type="text" value="{{ $lease->due_date }}" class="form-control"
+                                            readonly />
                                     </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
@@ -491,12 +488,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">
@@ -505,12 +503,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">
@@ -519,12 +518,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">
@@ -533,12 +533,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">
@@ -547,12 +548,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">
@@ -561,12 +563,13 @@
                                 </div>
                             </div>
                             <div>
-                                @php
-                                    $data = App\Models\LeieadminLogo::first();
-                                @endphp
-                                <div class="mb-3 pb-2 clearfix" style="border-bottom: 1px solid #000">
-                                    <img src="{{ asset('public/uploads/' . $lease->logo) }}" class="float-right site-logo"
-                                        style="height: 35px;filter: invert(.8)">
+                                <div class="mb-3 pb-2 d-flex justify-content-between" style="border-bottom: 1px solid #000">
+                                    <div>
+                                        <h5></h5>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('public/uploads/' . $data->logo) }}" class="float-right site-logo" style="height: 35px;filter: invert(.8)">
+                                    </div>
                                 </div>
                                 <div class="mt-3 pt-2 d-flex justify-content-between"
                                     style="border-top: 1px solid;padding-top: 8px">

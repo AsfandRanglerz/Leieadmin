@@ -29,12 +29,12 @@
 
 <body>
     <section class="m-4">
-        <div class="">
-            <img src="{{ asset('public/uploads/'.$logo->logo) }}" height="40px" style="background: black">
+        <div style="width: 100px; margin: auto;">
+            <img src="{{ asset('public/uploads/'.$logo->logo) }}" height="50px" style="background: rgb(99, 67, 67)"  class="rounded">
         </div>
         <div class="d-flex flex-column">
             <div>
-                <button class="float-right border-0" onclick="window.print()"><img
+                <button class="float-right border-0 print"><img
                         src="{{ asset('public/front_end/images/print-button.png') }}" height="40px"></button>
             </div>
             <div>
@@ -220,6 +220,12 @@
             e.preventDefault();
             sig.signature('clear');
             $("#signature64").val('');
+        });
+
+        $('.print').click(function() {
+            $(this).hide();
+            window.print(); 
+            $(this).show();
         });
     </script>
 </body>
